@@ -17,7 +17,7 @@ const Loading: React.FC<LoadingProps> = ({
     <div
       className={`${
         overlay
-          ? "fixed inset-0 bg-black/[0.3] flex items-center justify-center z-[100]"
+          ? "fixed inset-0 bg-black/[0.3] flex items-center justify-center z-[100] bg-opacity-90 backdrop-blur-sm"
           : "flex items-center justify-center"
       } ${className}`}
     >

@@ -14,7 +14,7 @@ const UserInfo = () => {
         </p>
       </div>
       <div className="mt-3 sm:mt-0 rounded-lg shadow-sm border flex justify-center items-center gap-2 w-full sm:w-auto py-2 px-3">
-        <Icon name="calendar" className="justify-center" size={5} />
+        <Icon name="calendar" className="justify-center" />
         <span className="border-r-2 pr-2">Today</span>
         <span>11 Nov 2024</span>
       </div>

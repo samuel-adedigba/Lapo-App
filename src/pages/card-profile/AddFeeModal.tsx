@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import Modal from "../../components/re-useable/Modal";
 import FormInput from "../../components/re-useable/FormInput";
@@ -37,7 +38,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
     <Modal isOpen={isOpen} onClose={onClose} >
      <div className="-mt-8" >
         <div className="flex gap-4 mb-4" >
-          <Icon name="box-plus" size={5} className="bg-white shadow-sm rounded-md p-3 border"  />
+          <Icon name="box-plus"  className="bg-white shadow-sm rounded-md p-3 border"  />
           <span >
              <h1 className="text-lg font-semibold" > Add Fee </h1>
          <p className="" >  Fill in fee details.</p>

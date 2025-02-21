@@ -3,7 +3,7 @@ import { Icon, IconName } from "../../assets/Icon";
 
 interface CardItem {
   key: string;
-  title: string;
+  label?: string;
   value: string;
   status: string;
   rate?: string;
@@ -33,8 +33,8 @@ const CardList: React.FC<CardListProps> = ({
         {items.map((item) => (
           <div key={item.key} className={`rounded-xl gap-8 ${itemClass}`}>
             <div className={`${textClass} mb-4  `}>
-              <Icon  name={item.icon} size={6} />
-              <span className="text-lg">{item.title}</span>
+            <Icon name={item.icon as IconName} size={6} />
+              <span className="text-lg">{item.label}</span>
             </div>
             <div className="flex justify-between my-4">
               <h2 className="text-2xl font-bold">{item.value}</h2>

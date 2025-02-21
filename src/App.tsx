@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/fonts.css';
 import AppRoutes from './routes';
 import { BrowserRouter as Router } from 'react-router-dom';
 

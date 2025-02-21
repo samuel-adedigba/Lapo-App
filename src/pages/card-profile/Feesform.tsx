@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import Table from '../../components/re-useable/Table';
 import { Icon } from '../../assets/Icon';

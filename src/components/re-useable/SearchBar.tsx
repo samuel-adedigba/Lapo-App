@@ -11,7 +11,7 @@ const SearchBar: React.FC<SearchProps> = ({ placeholder, handleSearch, search })
   return (
     <div className="w-full flex border-y-2  ">
       <div className="flex gap-3 my-4 px-4 ml-3 py-4 w-full md:w-1/3 rounded-xl items-center bg-[#FFFFFF] shadow-md">
-        <Icon name="search" size={5} className="text-gray-500 opacity-60" />
+        <Icon name="search" className="text-gray-500 opacity-60" />
         <input
           type="text"
           name="search"

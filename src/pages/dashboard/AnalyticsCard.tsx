@@ -3,7 +3,7 @@ import CardList from "../../components/re-useable/CardList";
 import {  IconName } from "../../assets/Icon";
 
 export type IconProp = {
-    title?: string
+    label?: string
     icon: IconName;
     key: string
     value: string
@@ -11,10 +11,10 @@ export type IconProp = {
     rate?:string
   }
 const AnalyticsCard = () => {
-  const analyticsData:IconProp[] = [
+    const analyticsData: IconProp[] = [
     {
       key: "active",
-      title: "Total Active Cards",
+      label: "Total Active Cards",
       value: "26,478",
       icon: "icon1",
       status: "this month",
@@ -22,7 +22,7 @@ const AnalyticsCard = () => {
     },
     {
       key: "personalized",
-      title: "Total Personalized Cards",
+      label: "Total Personalized Cards",
       value: "15,703",
       icon: "card2",
       status: "this month",
@@ -30,7 +30,7 @@ const AnalyticsCard = () => {
     },
     {
       key: "revenue",
-      title: "Today's Revenue",
+      label: "Today's Revenue",
       value: "₦9.3M",
       icon: "card3",
       status: "vs yesterday",
@@ -38,7 +38,7 @@ const AnalyticsCard = () => {
     },
     {
       key: "pending",
-      title: "Pending Requests",
+      label: "Pending Requests",
       value: "38",
       icon: "hourglass",
       status: "Requires attention",

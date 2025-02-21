@@ -40,7 +40,7 @@ const QuickAccessCard = () => {
                 <Icon name={item?.icon} size={8} />
               </div>
               <h3 className="text-base font-semibold mr-2">{item.title}</h3>
-              <Icon name="right-arrow"  size={8} />
+              <Icon name="right-arrow"  />
             </div>
            
           </button>
