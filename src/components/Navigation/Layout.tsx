@@ -20,12 +20,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <MobileToggle isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div
         className={`flex flex-col flex-grow transition-all duration-300 ${
-          isSidebarOpen ? "ml-64" : "ml-0 md:ml-64"
+          isSidebarOpen ? "ml-56" : "ml-0 md:ml-56"
         }`}
       >
         <TopBar isSidebarOpen={isSidebarOpen} />
         <main
-          className="p-4 sm:p-6 md:p-10 mt-16 mx-2 sm:mx-4 w-full min-h-screen overflow-y-auto pb-12 scrollbar-hide bg-[#F1F7FF]"
+          className="p-2 sm:p-4 md:p-8 mt-14 mx-2 sm:mx-4 w-full min-h- overflow-y-auto scrollbar-hide bg-[#F1F7FF]"
         >
           {children}
         </main>

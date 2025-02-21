@@ -1,12 +1,13 @@
 import React from "react";
+import { Icon, IconName } from "../../assets/Icon";
 
 interface CardItem {
   key: string;
   title: string;
   value: string;
-  icon: string;
   status: string;
   rate?: string;
+  icon: IconName
 }
 
 interface CardListProps {
@@ -32,7 +33,7 @@ const CardList: React.FC<CardListProps> = ({
         {items.map((item) => (
           <div key={item.key} className={`rounded-xl gap-8 ${itemClass}`}>
             <div className={`${textClass} mb-4  `}>
-              <img src={item.icon} alt={item.title} className="w-6 h-6" />
+              <Icon  name={item.icon} size={6} />
               <span className="text-lg">{item.title}</span>
             </div>
             <div className="flex justify-between my-4">
@@ -47,12 +48,9 @@ const CardList: React.FC<CardListProps> = ({
                     }`}
                   >
                     {item.rate.includes("+") ? (
-                      <img
-                        src="../src/assets/arrow-narrow-up-right.png"
-                        className="w-5 h-5"
-                      />
+                      <Icon  name="arrow-up" size={4} />
                     ) : (
-                      "📉"
+                      ""
                     )}{" "}
                     {item.rate}
                   </span>
@@ -61,11 +59,7 @@ const CardList: React.FC<CardListProps> = ({
                   {item.key === "pending" ? (
                     <span className="flex gap-1 text-[#E78020]">
                       {" "}
-                      <img
-                        src="../src/assets/alert-circle.png"
-                        alt=""
-                        className="w-5 h-5"
-                      />{" "}
+                      <Icon   name="alert-warning" />
                       <span> Requires attention </span>{" "}
                     </span>
                   ) : (

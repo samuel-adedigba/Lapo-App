@@ -1,27 +1,32 @@
 import React from "react";
+import { Icon, IconName } from "../../assets/Icon";
 
+type IconProp = {
+    title?: string
+    icon: IconName;
+  }
 const QuickAccessCard = () => {
-  const quickAccess = [
+  const quickAccess: IconProp[] = [
     {
       title: "Manage a Card",
-      icon: "/src/assets/card1.png",
+      icon: "card1",
     },
     {
       title: "Issue Instant Card",
-      icon: "/src/assets/card1.png",
+      icon: "card1",
     },
     {
       title: "Issue Personalized Card",
-      icon: "/src/assets/card1.png",
+      icon: "card1",
     },
     {
       title: "Review Card Requests",
-      icon: "/src/assets/card1.png",
+      icon: "card1",
     },
   ];
 
   return (
-    <div className="px-6 py-4 bg-white rounded-lg shadow-sm">
+    <div className="px-6 py-4 bg-white rounded-lg shadow-sm mb-4">
       <h2 className="text-lg font-semibold mb-4">Your Quick Access</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-4">
         {quickAccess.map((item, index) => (
@@ -32,10 +37,10 @@ const QuickAccessCard = () => {
           >
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 flex items-center justify-center rounded-full">
-                <img src={item.icon} alt="icon" className="w-8 h-8" />
+                <Icon name={item?.icon} size={8} />
               </div>
               <h3 className="text-base font-semibold mr-2">{item.title}</h3>
-               <img src="/src/assets/right_arrow.png" alt="arrow" className="w-6 h-6" />
+              <Icon name="right-arrow"  size={8} />
             </div>
            
           </button>

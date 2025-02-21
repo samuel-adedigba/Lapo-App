@@ -12,7 +12,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <nav
       className={`
-        fixed top-0 left-0 h-full w-72 bg-[#FFFFFF] p-4 shadow-md
+        fixed top-0 left-0 h-full w-64 bg-[#FFFFFF] p-4 shadow-md
         transition-transform duration-300 z-40
         ${isOpen ? "translate-x-0" : "-translate-x-64"}
         md:translate-x-0
@@ -57,10 +57,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </li>
           ))}
         </ul>
-        <div className="flex-shrink-0 mb-6">
+        <div className="flex-shrink-0 py-6 z-10">
           <div className="flex items-center gap-4">
-            <Icon name="logout" size={7} />
-            <button className="text-base">Logout</button>
+            <Icon name="logout" className="p-2" />
+            <button className="text-base ">Logout</button>
           </div>
           <div className="mt-6 text-base font-light text-gray-400">
             <h2>POWERED BY</h2>

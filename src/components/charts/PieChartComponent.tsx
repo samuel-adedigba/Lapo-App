@@ -10,10 +10,10 @@ const PieChartComponent: React.FC<PieChartProps> = ({ data, title }) => {
   const total = data?.reduce((sum, item) => sum + item?.value, 0);
 
   return (
-    <div className="relative flex flex-col items-center p-6 rounded-xl">
-      <h2 className="text-2xl font-semibold ">{title}</h2>
-      <div className="relative w-[400px] h-[250px] flex items-center justify-center">
-        <PieChart width={400} height={400}>
+    <div className="relative flex flex-col items-center p-4 sm:p-6 rounded-xl w-full max-w-lg mx-auto">
+           <h2 className="text-lg sm:text-2xl font-semibold text-center mb-4">{title}</h2>
+           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex items-center justify-center">
+        <PieChart width={300} height={300}>
           <Pie
             data={data}
             cx="50%"
@@ -36,18 +36,18 @@ const PieChartComponent: React.FC<PieChartProps> = ({ data, title }) => {
           <Tooltip />
         </PieChart>
         <div className="absolute text-center">
-          <p className="text-gray-500 text-sm">Total Cards</p>
-          <p className="text-3xl font-medium">{total?.toLocaleString()}</p>
+        <p className="text-gray-500 text-xs sm:text-sm">Total Cards</p>
+        <p className="text-xl sm:text-3xl font-medium">{total?.toLocaleString()}</p>
         </div>
       </div>
-      <div className="mt-6 justify-center gap-4 grid grid-cols-5 sm:grid-cols-5 lg:flex">
+      <div className="mt-6 flex flex-wrap justify-center gap-4">
         {data?.map((entry, index) => (
           <div key={index} className="flex items-center gap-2">
             <div
-              className="w-4 h-4 rounded-full"
+              className="w-3 h-3 sm:w-4 sm:h-4 rounded-full"
               style={{ backgroundColor: entry.color }}
             ></div>
-            <p className="text-gray-600 text-sm">{entry.name}</p>
+            <p className="text-gray-600 text-base ">{entry.name}</p>
           </div>
         ))}
       </div>

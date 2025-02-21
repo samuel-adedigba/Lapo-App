@@ -1,10 +1,11 @@
 import React from "react";
+import { Icon, IconName } from "../../assets/Icon";
 
 interface CardProps {
   title?: string;
   value?: string | number;
   percentage?: string;
-  icon?: string;
+  icon?: IconName;
   className?: string;
   children?: React.ReactNode;
   
@@ -20,7 +21,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className={` px-10 py-4 flex items-center ${className}`}>
-      {icon && <img src={icon} alt="icon" className={`${className}`} />}
+      {icon && <Icon name={icon} className={`${className}`} />}
       
       <div className="">
         <h3 className="text-base font-medium">{title}</h3>
