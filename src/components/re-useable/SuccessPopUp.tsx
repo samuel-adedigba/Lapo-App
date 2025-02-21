@@ -17,15 +17,15 @@ const SuccessPopUp: React.FC<SuccessPopUpProps> = ({ isClose, isOpen, message, r
       <div className="w-full max-w-sm bg-white shadow-lg p-6 rounded-lg text-center">
         <div className="flex  mb-4">
           {response === 'success' ? (
-            <Icon name="success" size={12} className="text-green-500" />
+            <Icon name="success" size={16} className="text-green-500" />
           ) : (
-            <Icon name="fail" size={12} className="text-red-500" />
+            <Icon name="fail" size={16} className="text-red-500" />
           )}
         </div>
         <h1 className="text-lg font-semibold mb-2 text-left">
           {response === 'success' ? 'Successful' : 'Failed'}
         </h1>
-        <span className="text-gray-600 text-left w-full">{message}</span>
+        <p className="text-gray-600 text-left w-full ">{message}</p>
         <button
           onClick={isClose}
           className="mt-6 bg-[#014DAF] text-white font-medium px-4 py-2 rounded-md w-full hover:bg-[#013A8D] transition"

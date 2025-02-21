@@ -1,50 +1,94 @@
-# React + TypeScript + Vite
+## Lapo App - Microfinance Bank
+Overview
+The Lapo App is a microfinance banking application designed to simplify card management for users. It allows users to:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Issue new cards through the Card Request Flow.
 
-Currently, two official plugins are available:
+View and manage card details via the Card Profile Flow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Access a Dashboard for an overview of card-related information.
 
-## Expanding the ESLint configuration
+This app is built to provide a seamless and intuitive user experience for managing cards, with a focus on simplicity and functionality.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
+1. Dashboard:
 
-- Configure the top-level `parserOptions` property like this:
+   - Path: /
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+   - Displays an overview of card-related information.
+
+   - Features a clean and responsive design.
+
+2. Card Request Flow:
+
+   - Allows users to request a new card.
+
+   - Includes a multi-step form for collecting user details.
+
+3. Card Profile Flow:
+
+   - Displays detailed information about issued cards.
+
+   - Provides a user-friendly interface for managing card details.
+
+4. Technologies Used
+   - Frontend:
+
+   - Vite (React + TypeScript)
+
+   - Tailwind CSS (for styling)
+
+5. Hosting:
+
+   - Vercel (for deployment)
+
+6. How to Run the Project
+   - Clone the repository:
+
+```bash
+  - git clone https://github.com/your-username/lapo-app.git
+Navigate to the project directory:
+```
+```bash
+cd lapo-app
+Install dependencies:
+```
+```bash
+npm install
+Run the development server:
+```
+``` bash
+npm run dev
+Build the project for production:
+```
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+ ```Live Demo```
+   - The app is hosted on Vercel. You can access it here:
+ [Live Demo](https://lapo-app.vercel.app)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```Notes```
+- All data displayed in the app is dummy data, created based on the Figma design provided.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- No backend or API implementation is included in this project. The focus is solely on the frontend functionality and UI.
+
+```About Me```
+  - My name is Samuel Adedigba, and I am a Frontend Developer with over 2 years of experience building user-friendly and responsive web applications. I specialize in:
+
+      - React and TypeScript for building dynamic and scalable frontend applications.
+
+         - Tailwind CSS for creating modern and responsive designs.
+
+            - I am currently expanding my skill set by practicing ```Node.js and MongoDB```, with the goal of becoming a MERN Stack Developer.
+
+```Connect with Me```
+   - [LinkedIn](https://www.linkedin.com/in/samuel-adedigba)
+
+   - [Portfolio](https://samuel-adedigba.vercel.app/)
+
+```Acknowledgments```
+  - Figma Design: Lapo App Figma Design
+
+  - Vercel: For hosting the application.

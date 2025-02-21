@@ -6,13 +6,14 @@ interface ModalProps {
   onClose: () => void;
   title?: string;
   children: React.ReactNode;
+  className?: string
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, className }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-41 ${className} bg-black bg-opacity-70 z-50 backdrop-blur-md  `}>
       <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
         <div className="flex justify-between items-center">
           {title && <h2 className="text-lg font-semibold">{title}</h2>}

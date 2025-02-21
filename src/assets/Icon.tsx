@@ -41,6 +41,10 @@ export type IconName =
   | 'plus'
   | 'cancel'
   | 'box-plus'
+  | 'arrow-left'
+  |'card-crumb'
+  | 'right-crumb'
+  | 'credit-card-crumb'
   | 'menu';
 
 interface IconProps {
@@ -90,6 +94,10 @@ const iconPaths: Record<IconName, string> = {
   plus: '/plus.png',
   cancel: '/cancel.png',
   'box-plus': '/box-plus.png',
+  'arrow-left' :'/arrow-left.png',
+  'card-crumb' : 'card-crumb.png',
+  'right-crumb' : 'right-crumb.png',
+  'credit-card-crumb' : 'credit-card-crumb.png',
   fail: '',
   menu: '', // Empty for now
 };

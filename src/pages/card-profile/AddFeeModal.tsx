@@ -34,10 +34,10 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
 
   return (
     <>
-     <div className={`space-y-4 p-4 sm:p-6 ${className}`}>
+     <div className={`space-y-4 p-4 sm:p-6 overflow-auto scrollbar-hide  ${className}` }>
     <Modal isOpen={isOpen} onClose={onClose} >
      <div className="-mt-8" >
-        <div className="flex gap-4 mb-4" >
+        <div className="flex gap-2 sm:gap-4 mb-4" >
           <Icon name="box-plus"  className="bg-white shadow-sm rounded-md p-3 border"  />
           <span >
              <h1 className="text-lg font-semibold" > Add Fee </h1>
@@ -57,7 +57,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
           onChange={(value) => handleChange("feeName", value)}
           placeholder="Maintenance"
           required
-          className="w-full"
+          className="w-full text-sm"
         />
         <FormInput
         name="Value"
@@ -67,12 +67,12 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
           type="number"
           placeholder="0"
           required
-          className="w-full"
+          className="w-full text-sm"
         />
 
         <div>
           <label className="block text-sm font-medium">Currency</label>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4">
             <label className="flex items-center">
               <input
                 type="radio"
@@ -91,7 +91,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
                 value="USD"
                 checked={formData.currency === "USD"}
                 onChange={() => handleChange("currency", "USD")}
-                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
               />
               USD
             </label>
@@ -100,7 +100,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
 
         <div>
           <label className="block text-sm font-medium">Fee Frequency</label>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4">
             <label className="flex items-center">
               <input
                 type="radio"
@@ -108,7 +108,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
                 value="One Off"
                 checked={formData.frequency === "One Off"}
                 onChange={() => handleChange("frequency", "One Off")}
-                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
               />
             One Off
             </label>
@@ -119,7 +119,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
                 value="Monhtly"
                 checked={formData.frequency === "Monhtly"}
                 onChange={() => handleChange("frequency", "Monhtly")}
-                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
               />
               Monhtly
             </label>
@@ -128,7 +128,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
 
         <div>
           <label className="block text-sm font-medium">Fee Impact</label>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4">
             <label className="flex items-center">
               <input
                 type="radio"
@@ -136,7 +136,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
                 value="Issuance"
                 checked={formData.feeImpact === "Issuance"}
                 onChange={() => handleChange("feeImpact", "Issuance")}
-                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
               />
            Issuance
             </label>
@@ -147,7 +147,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
                 value="Pin Reissue"
                 checked={formData.feeImpact === "Pin Reissue"}
                 onChange={() => handleChange("feeImpact", "Pin Reissue")}
-                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+                className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
               />
              Pin Reissue
             </label>
@@ -155,7 +155,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
         </div>
         <div>
   <label className="block text-sm font-medium">Account Paid</label>
-  <div className="flex flex-wrap gap-4">
+  <div className="flex flex-wrap gap-2 sm:gap-4">
     <label className="flex items-center">
       <input
         type="radio"
@@ -163,7 +163,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
         value="None"
         checked={formData.accountPad === "None"}
         onChange={() => handleChange("accountPad", "None")}
-        className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4"  
+        className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4"  
       />
       None
     </label>
@@ -174,7 +174,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
         value="Branch Code Prefix"
         checked={formData.accountPad === "Branch Code Prefix"}
         onChange={() => handleChange("accountPad", "Branch Code Prefix")}
-        className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+        className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
       />
       Branch Code Prefix
     </label>
@@ -185,7 +185,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, cl
         value="Branch Code Suffix"
         checked={formData.accountPad === "Branch Code Suffix"}
         onChange={() => handleChange("accountPad", "Branch Code Suffix")}
-        className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-4" 
+        className="w-6 h-6 text-white bg-blue-600 rounded focus:text-white mr-2 flex flex-wrap gap-2 sm:gap-4" 
       />
       Branch Code Suffix
     </label>
