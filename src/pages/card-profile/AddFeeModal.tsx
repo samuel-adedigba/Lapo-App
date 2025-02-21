@@ -8,9 +8,10 @@ interface AddFeeModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (values: Record<string, any>) => void;
+  className?: string;
 }
 
-const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit }) => {
+const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit, className }) => {
   const [formData, setFormData] = useState({
     feeName: "",
     value: "",
@@ -32,7 +33,7 @@ const AddFeeModal: React.FC<AddFeeModalProps> = ({ isOpen, onClose, onSubmit }) 
 
   return (
     <>
-     <div className="space-y-4 p-4 sm:p-6">
+     <div className={`space-y-4 p-4 sm:p-6 ${className}`}>
     <Modal isOpen={isOpen} onClose={onClose} >
      <div className="-mt-8" >
         <div className="flex gap-4 mb-4" >
