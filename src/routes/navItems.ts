@@ -1,92 +1,91 @@
-import { ElementType } from "react";
-import { FaUser, FaWallet, FaChartBar, FaCogs } from "react-icons/fa";
+import { IconName } from "../assets/Icon"
 
 export type NavItemType = {
     key: string;
     name: string;
     path: string;
-    icon: ElementType ;
+    icon: IconName ;
     subMenu?: NavItemType[]; 
 };
 
 const navItems: NavItemType[] = [
   {
-    key: "SuperAdminDashboard",
+    key: "dashboard",
     name: "Dashboard",
     path: "/",
-    icon: FaChartBar,
+    icon: "home", 
   },
   {
-    key: "main-maen",
+    key: "main-menu",
     name: "MAIN MENU",
     path: "/",
-    icon: FaWallet ,
+    icon: "menu", 
+  },
+  {
+    key: "branches",
+    name: "Branches",
+    path: "/branches",
+    icon: "building",
+  },
+  {
+    key: "roles",
+    name: "Roles",
+    path: "/roles",
+    icon: "roles",
   },
   {
     key: "users",
-    name: "Branches",
-    path: "/",
-   icon: FaUser,
-  },
-  {
-    key: "settings",
-    name: "Roles",
-    path: "/",
-   icon: FaCogs,
-  },
-  {
-    key: "settings",
     name: "Users",
-    path: "/",
-   icon: FaCogs,
+    path: "/users",
+    icon: "users",
   },
   {
-    key: "settings",
+    key: "card-scheme",
     name: "Card Scheme",
-    path: "/",
-   icon: FaCogs,
+    path: "/card-scheme",
+    icon: "card-scheme",
   },
   {
-    key: "settings",
+    key: "card-profile",
     name: "Card Profile",
-    path: "/",
-   icon: FaCogs,
+    path: "/card-profile",
+    icon: "card-profile",
   },
   {
-    key: "settings",
+    key: "card-request",
     name: "Card Request",
-    path: "/",
-   icon: FaCogs,
+    path: "/card-request",
+    icon: "card-request",
   },
   {
-    key: "settings",
+    key: "stocks",
     name: "Stock",
-    path: "/",
-   icon: FaCogs,
+    path: "/stocks",
+    icon: "stocks",
   },
   {
-    key: "settings",
+    key: "cards",
     name: "Cards",
-    path: "/",
-   icon: FaCogs,
+    path: "/cards",
+    icon: "credit-card",
   },
   {
-    key: "settings",
+    key: "auth-queue",
     name: "Authorization Queue",
-    path: "/",
-   icon: FaCogs,
+    path: "/auth-queue",
+    icon: "auth-list",
   },
   {
-    key: "settings",
+    key: "trail",
     name: "Trail",
-    path: "/",
-   icon: FaCogs,
+    path: "/trail",
+    icon: "trail",
   },
   {
-    key: "settings",
+    key: "account",
     name: "Account",
-    path: "/",
-   icon: FaCogs,
+    path: "/account",
+    icon: "user",
   },
 ];
 

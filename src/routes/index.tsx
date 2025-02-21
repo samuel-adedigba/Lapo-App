@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { privateRoutes } from "./privateRoutes";
 import ProtectedRoute from "./protectedRoute";
-import Loading from "../components/UI/Loading";
+import Loading from "../components/re-useable/Loading";
 import Layout from "../components/Navigation/Layout";
 
 

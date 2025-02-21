@@ -1,5 +1,5 @@
 import React from "react";
-import List from "../../components/UI/List";
+import List from "../../components/re-useable/List";
 
 const InvoiceList = () => {
   const lastTransactions = [

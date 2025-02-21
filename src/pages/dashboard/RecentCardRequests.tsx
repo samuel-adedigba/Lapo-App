@@ -33,7 +33,7 @@ const RecentCardRequests = () => {
   ];
 
   // Function to return appropriate styles for status badges
-  const getStatusStyles = (status) => {
+  const getStatusStyles = (status:string) => {
     switch (status) {
       case "Ready":
         return "bg-green-100 text-green-700";

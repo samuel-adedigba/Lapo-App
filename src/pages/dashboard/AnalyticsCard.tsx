@@ -1,5 +1,5 @@
 import React from "react";
-import CardList from "../../components/UI/CardList";
+import CardList from "../../components/re-useable/CardList";
 
 const AnalyticsCard = () => {
   const analyticsData = [

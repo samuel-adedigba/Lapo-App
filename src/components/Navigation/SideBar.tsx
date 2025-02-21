@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import navItems, { NavItemType } from "../../routes/navItems";
+import { Icon } from "../../assets/Icon";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -18,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       `}
     >
       <div className="h-full flex flex-col">
-        <img className="mb-6" src="../src/assets/lapo_logo.png" alt="Logo" />
+        <Icon name="lapo-logo" className="mb-4" size={24} />
         <ul className="flex-grow overflow-y-auto pb-12 scrollbar-hide">
           {navItems.map((item: NavItemType) => (
             <li key={item.path} className="mb-4">
@@ -27,8 +28,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 className="flex items-center p-2"
                 onClick={toggleSidebar}
               >
-                <item.icon className="mr-2" />
-                <span>{item.name}</span>
+                <Icon name={item.icon} className="mr-3" size={6} />
+                <span>
+                  {" "}
+                  {item.key === "main-menu" ? (
+                    <small className="ml-4 text-sm "> {item.name} </small>
+                  ) : (
+                    <span> {item.name} </span>
+                  )}
+                </span>
               </Link>
               {item.subMenu && (
                 <ul className="ml-4">
@@ -39,7 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                         className="flex items-center p-2"
                         onClick={toggleSidebar}
                       >
-                        <sub.icon className="mr-2" />
+                        <Icon name={sub.icon} className="mr-3" size={24} />
                         <span>{sub.name}</span>
                       </Link>
                     </li>
@@ -51,21 +59,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </ul>
         <div className="flex-shrink-0 mb-6">
           <div className="flex items-center gap-4">
-            <img
-              src="../src/assets/logout-02.png"
-              alt="logout icon"
-              className="w-7 h-7"
-            />
+            <Icon name="logout" size={7} />
             <button className="text-base">Logout</button>
           </div>
           <div className="mt-6 text-base font-light text-gray-400">
             <h2>POWERED BY</h2>
-            <img
-              src="../src/assets/cardinfra.png"
-              alt="company_logo"
-              className="mt-4"
-              width={150}
-            />
+            <Icon name="cardinfra" className="mt-4" size={16} />
           </div>
         </div>
       </div>
